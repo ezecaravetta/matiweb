@@ -3,7 +3,7 @@ var mysql = require('mysql');
 var config = {
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: '2206',
     database: 'aStore'
 };
 

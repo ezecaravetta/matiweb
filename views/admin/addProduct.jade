@@ -2,49 +2,49 @@ extends admin
 
 block details
     form(id='addProduct', action='/admin/products/add', method='POST')
-        label(for='name') Product Name
+        label(for='name') Nombre del Producto
         br
         input(type='text', id='name', name='name', placeholder='Product Name', required=true)
         br
 
-        label(for='category') Category
+        label(for='category') Categoria
         br
         select(id='category', name='category')
             each category in categories
                 option(value=category.CategoryID)= category.CategoryName
         br
 
-        label(for='price') Product Price
+        label(for='price') Precio del Producto
         br
         input(type='text', id='price', name='price', placeholder='125.88', required=true)
         br
 
-        label(for='unit') Units in stock
+        label(for='unit') Unidad en Stock
         br
         input(type='text', id='unit', name='unit', placeholder='12', required=true)
         br
 
-        label(for='description') Description
+        label(for='description') Descripcion
         br
         textarea(id='description', name='description', required=true) Product Description
         br
 
-        label(for='year') Manufacturing Year
+        label(for='year') Fecha de Fabricacion
         br
         input(type='text', id='year', name='year', placeholder='2020', required=true)
         br
 
-        label(for='image') Product Image
+        label(for='image') Imagen del Producto
         input(type='file', id='image', name='image')
         br
 
         p
-            b Featured Product
-        label(for='featureYes') Yes
+            b Producto Destacado
+        label(for='featureYes') Si
         input(type='radio', id='featureYes', name='feature', value=1)
 
         label(for='featureNo') No
         input(type='radio', id='featureNo', name='feature', value=0)
         br
 
-        button.btn.btn-default(type='submit') Submit
+        button.btn.btn-default(type='submit') Actualizar

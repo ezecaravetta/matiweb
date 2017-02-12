@@ -2,23 +2,23 @@ extends info
 
 block details
     form(action='/usr/' + customer.Username + '/addresses/add', method='POST')
-        label(for='fullName') Fullname
+        label(for='fullName') Nombre Completo
         input(type='text', id='fullName', name='fullName', placeholder='Full name')
         br
-        label(for='address') Street Address
+        label(for='address') Direccion
         input(type='text', id='address', name='streetAddress', placeholder='Street Address')
         br
-        label(for='postcode') Post Code
+        label(for='postcode') Codigo Postal
         input(type='text', id='postcode', name='postcode', placeholder='Post Code')
         br
-        label(for='city') City
+        label(for='city') Ciudad
         input(type='text', id='city', name='city', placeholder='City')
         br
-        label(for='country') Country
+        label(for='country') Provincia
         input(type='text', id='country', name='country', placeholder='Country')
         br
-        label(for='phone') Phone
+        label(for='phone') Telefono
         input(type='tel', id='phone', name='phone', placeholder='Phone')
         br
         button.btn.btn-default(type='submit')
-            | Add
+            | Agregar

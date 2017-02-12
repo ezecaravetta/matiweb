@@ -2,23 +2,23 @@ extends info
 
 block details
     form(action='/usr/' + customer.Username + '/addresses/' + address.AddressID + '/edit', method='POST')
-        label(for='fullName') Fullname
+        label(for='fullName') Nombre Completo
         input(type='text', id='fullName', name='fullName', value=address.FullName)
         br
-        label(for='address') Street Address
+        label(for='address') Direccion
         input(type='text', id='address', name='streetAddress', value=address.StreetAddress)
         br
-        label(for='postcode') Post Code
+        label(for='postcode') Codigo Postal
         input(type='text', id='postcode', name='postcode', value=address.PostCode)
         br
-        label(for='city') City
+        label(for='city') Ciudad
         input(type='text', id='city', name='city', value=address.City)
         br
-        label(for='country') Country
+        label(for='country') Provincia
         input(type='text', id='country', name='country', value=address.Country)
         br
-        label(for='phone') Phone
+        label(for='phone') Telefono
         input(type='tel', id='phone', name='phone', value=address.Phone)
         br
         button.btn.btn-default(type='submit')
-            | Update
+            | Actualizar

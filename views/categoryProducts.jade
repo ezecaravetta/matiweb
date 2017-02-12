@@ -11,7 +11,7 @@ block content
                             .panel.panel-default
                                 .panel-heading
                                     h4.panel-title
-                                        a(href='/cat/all') All Products
+                                        a(href='/cat/all') Todos Los Productos
                             h2
                             each category in categories
                                 .panel.panel-default
@@ -35,9 +35,9 @@ block content
                                                     img(src='/img/products/' + product.Image, alt=product.ProductName)
                                                 p
                                                     a(href=productUrl)=product.ProductName
-                                                h2= '€' + product.ProductPrice
+                                                h2= '$' + product.ProductPrice
                                                 form(action='/cart/' + product.ProductID + '/add', method='POST')
                                                     button.btn.btn-default.add-to-cart(type='submit')
                                                         i.fa.fa-shopping-cart
-                                                        | Add to cart
+                                                        | Agregar 
             ///category_products

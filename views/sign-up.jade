@@ -12,16 +12,16 @@ block content
                             .panel.panel-default
                                 .panel-heading
                                     h4.panel-title
-                                        a(href='/sign-in') Sign in
+                                        a(href='/sign-in') Ingresar
                             .panel.panel-default
                                 .panel-heading
                                     h4.panel-title
-                                        a(href='/sign-up') Sign up
+                                        a(href='/sign-up') Salir
                     ///nav-bar
                 .col-sm-5.text-center
                     //sign up form
                     .signup-form
-                        h2 New User Signup!
+                        h2 Nuevo Usuario!
                         if checkOutNoti
                             if (signUpError != '')
                                 p=signUpError
@@ -42,6 +42,6 @@ block content
                             input(type='text', name='username', placeholder='Username' required=true)
                             input(type='password', name='password', placeholder='Password' required=true)
                             input(type='password', name='rePassword', placeholder='Password again' required=true)
-                            button.btn.btn-default(type='submit') Signup
+                            button.btn.btn-default(type='submit') Ingresar
                     ///sign up form
     ///form

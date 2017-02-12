@@ -6,9 +6,9 @@ block details
             thead
                 tr
                     td #
-                    td Fullname
+                    td Nombre Completo
                     td Email
-                    td Username
+                    td Usuario
                     td Admin
                     td
             tbody
@@ -19,7 +19,7 @@ block details
                         td= customer.Email
                         td= customer.Username
                         td
-                            - var admin = 'Yes'
+                            - var admin = 'Si'
                             if customer.Admin == 0
                                 - admin = 'No'
                             = admin
@@ -32,14 +32,14 @@ block details
                                 form.dev-form(action='/admin/customers/' + customer.UserID + '/makeAdmin', method='POST')
                                     button.cus-btn.btn.btn-default(type='submit')
                                         i.fa.fa-unlock
-                                        = ' Make Admin'
+                                        = ' Como Administrador'
                             else
                                 form.dev-form(action='/admin/customers/' + customer.UserID + '/removeAdmin', method='POST')
                                     button.cus-btn.btn.btn-default(type='submit')
                                         i.fa.fa-lock
-                                        = ' Remove Admin'
+                                        = ' Eliminar Administrador'
                         td
                             form.dev-form(action='/admin/customers/' + customer.UserID + '/delete', method='POST')
                                 button.cus-btn.btn.btn-default(type='submit')
                                     i.fa.fa-trash-o
-                                    = ' Delete'
+                                    = ' Eliminar'

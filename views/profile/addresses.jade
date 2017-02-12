@@ -2,7 +2,7 @@ extends info
 
 block details
 
-    h3 Delivery Addresses
+    h3 Direccion de Entrega
     each address in addresses
         .col-sm-4
             h4= address.FullName
@@ -18,14 +18,14 @@ block details
             form.dev-form(action='/usr/' + customer.Username + '/addresses/' + address.AddressID + '/edit', method='GET')
                 button.btn.btn-default(type='submit')
                     i.fa.fa-edit
-                    =' Edit'
+                    =' Editar'
 
             form.dev-form(action='/usr/' + customer.Username + '/addresses/' + address.AddressID + '/delete', method='POST')
                 button.btn.btn-default(type='submit')
                     i.fa.fa-trash-o
-                    = ' Delete'
+                    = ' Eliminar'
 
     form(action='/usr/' + customer.Username + '/addresses/add', method='GET')
         button.btn.btn-default(type='submit')
             i.fa.fa-plus
-            = ' Add new address'
+            = ' Agregar nueva direccion'

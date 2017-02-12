@@ -2,28 +2,28 @@ extends info
 
 block details
     form(id='editProfile', action='/usr/' + customer.Username + '/edit', method='POST')
-        label(for='fullname') Fullname
+        label(for='fullname') Nombre Completo
         input(type='text', id='fullname', name='fullName', value=customer.FullName required=true)
         br
-        label(for='address') Street Address
+        label(for='address') Direccion
         input(type='text', id='address', name='streetAddress', value=customer.StreetAddress required=true)
         br
-        label(for='postcode') Post Code
+        label(for='postcode') Codigo Postal
         input(type='text', id='postcode', name='postcode', value=customer.PostCode required=true)
         br
-        label(for='city') City
+        label(for='city') Ciudad
         input(type='text', id='city', name='city', value=customer.City required=true)
         br
-        label(for='country') Country
+        label(for='country') Provincia
         input(type='text', id='country', name='country', value=customer.Country required=true)
         br
         label(for='email') Email
         input(type='email', id='email', name='email', value=customer.Email required=true)
         br
-        label(for='phone') Phone
+        label(for='phone') Telefono
         input(type='tel', id='phone', name='phone', value=customer.Phone required=true)
         br
-        label(for='password') Password
-        input(type='password', id='password', name='password', placeholder='Password to confirm changes' required=true)
+        label(for='password') Contraseña
+        input(type='password', id='password', name='password', placeholder='Contraseña para confirmar los cambios' required=true)
         br
-        button.btn.btn-default(type='submit') Update
+        button.btn.btn-default(type='submit') Actualizar

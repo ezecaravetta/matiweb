@@ -5,15 +5,15 @@ block content
         .container
             .row
                 h2.title.text-center
-                    | Shopping Cart
+                    | Tienda Online
                 .table-responsive.cart_info
                     table.table.table-condensed
                         thead
                             tr.cart_menu
                                 td.image
-                                td.description Product
-                                td.price Unit Price
-                                td.quantity Quantity
+                                td.description Producto
+                                td.price Precio Unitario
+                                td.quantity Cantidad
                                 td.total Total
                                 td
                         tbody
@@ -21,7 +21,7 @@ block content
                                 tr
                                     td
                                     td(colspan='3')
-                                        h4 No Product in Cart Currently
+                                        h4 Sin productos en el Carro
                             else
                                 each item in cart
                                     -var quantity = item.quantity;
@@ -39,16 +39,16 @@ block content
                                                 a(href=productLink)= name
                                             p= item.Description
                                         td.cart_price
-                                            p= unitPrice + ' €'
+                                            p= unitPrice + ' $'
                                         td.cart_quantity
                                             .cart_quantity_button
                                                 form(action='/cart/' + id + '/update', method='POST')
                                                     input.cart_quantity_input(type='text', name=id, value=quantity, autocomplete='off', size='2')
                                         td.cart_total
-                                            p.cart_total_price= productTotal + ' €'
+                                            p.cart_total_price= productTotal + ' $'
                                         td.cart_delete
                                             form(action='/cart/' + id + '/delete', method='POST')
-                                                button.cart_quantity_delete(type='submit')
+                                                button.cart_quantity_delete(type='Actualizar')
                                                     i.fa.fa-times
 
                             if (summary != null)
@@ -58,25 +58,25 @@ block content
                                         table.table.table-condensed.total-result
                                             thead
                                                 tr.cart_menu
-                                                    td(colspan=2) Summary
+                                                    td(colspan=2) Resumen
 
                                             tbody
                                                 tr
                                                     td Sub Total
-                                                    td= summary.subTotal + ' €'
+                                                    td= summary.subTotal + ' $'
                                                 tr
-                                                    td Discount
-                                                    td= summary.discount + ' €'
+                                                    td Descuento
+                                                    td= summary.discount + ' $'
                                                 tr.shipping-cost
-                                                    td Shipping Cost
+                                                    td Envio
                                                     if summary.shipCost == 0
                                                         td Free
                                                     else
-                                                        td= summary.shipCost + ' €'
+                                                        td= summary.shipCost + ' $'
                                                 tr
                                                     td Total
                                                     td
-                                                        span= summary.total + ' €'
+                                                        span= summary.total + ' $'
                                                 tr
                                                     td(colspan=2).text-right
-                                                        a.btn.btn-default.check_out(href='/checkout') Check Out
+                                                        a.btn.btn-default.check_out(href='/checkout') Verificar

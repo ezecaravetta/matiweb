@@ -40,24 +40,24 @@ block content
                                     - availability = 'Out of order'
 
                                 p
-                                    b Availability:
+                                    b Disponibilidad:
                                     = ' ' + availability
                                 p
-                                    b Manufacturing year:
+                                    b Fecha Prod:
                                     = ' ' + product.ManufactureYear
                                 p
                                     b Brand:
                                     |  aStore
 
                                 span
-                                    span= '€ ' + product.ProductPrice
+                                    span= '$ ' + product.ProductPrice
                                     form(action='/cart/' + product.ProductID + '/add', method='POST')
-                                        label Quantity:
+                                        label Cantidad:
                                             input(type='text', name='quantity', value='1')
                                         br
                                         button.btn.btn-default.add-to-cart(type='submit')
                                             i.fa.fa-shopping-cart
-                                            | Add to cart
+                                            | Agregar
 
                                 a(href='')
                                     img.share.img-responsive(src='images/product-details/share.png', alt='')

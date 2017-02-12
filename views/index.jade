@@ -19,7 +19,7 @@ block content
                 //.col-sm-9.padding-right
                 //features_items
                 .features_items
-                        h2.title.text-center Featured Products
+                        h2.title.text-center Productos Destacados
                         if featProducts
                             each product in featProducts
                                 - var productUrl = '/cat/' + product.CategorySlug + '/' + product.ProductSlug;
@@ -31,15 +31,15 @@ block content
                                                     img(src='/img/products/' + product.Image, alt=product.ProductName)
                                                 p
                                                     a(href=productUrl)=product.ProductName
-                                                h2= '€' + product.ProductPrice
+                                                h2= '$' + product.ProductPrice
                                                 form(action='/cart/' + product.ProductID + '/add', method='POST')
                                                     button.btn.btn-default.add-to-cart(type='submit')
                                                         i.fa.fa-shopping-cart
-                                                        | Add to cart
+                                                        | Agregar
                     ///features_items
             .row
                 .features_items
-                    h2.title.text-center Product Categories
+                    h2.title.text-center Categoria De Productos
                     if categories
                         each category in categories
                             .col-sm-3

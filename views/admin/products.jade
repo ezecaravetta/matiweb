@@ -15,30 +15,30 @@ block details
                             h2.cat= product.ProductName
 
                             p
-                                b Category:
+                                b Categoria:
                                 = ' ' + product.CategoryName
 
                             p= product.ProductDescription
 
                             p
-                                b Quantity:
+                                b Cantidad:
                                 = ' ' + product.UnitsInStock
                             p
-                                b Manufacturing year:
+                                b Fecha de Fabricacion:
                                 = ' ' + product.ManufactureYear
                             p
-                                b Brand:
+                                b Marca:
                                 |  aStore
 
                             p
-                                b Price:
-                                = ' € ' + product.ProductPrice
+                                b Precio:
+                                = ' $ ' + product.ProductPrice
 
-                            - var feature = 'Yes'
+                            - var feature = 'Si'
                             if (product.Feature == 0)
                                 - feature = 'No'
                             p
-                                b Featured Product:
+                                b Producto Destacado:
                                 = ' ' + feature
 
 
@@ -47,15 +47,15 @@ block details
                             form.dev-form(action='/admin/products/' + product.ProductID + '/edit', method='GET')
                                 button.btn.btn-default(type='submit')
                                     i.fa.fa-edit
-                                    = ' Edit'
+                                    = ' Editar'
 
                             form.dev-form(action='/admin/products/' + product.ProductID + '/delete', method='POST')
                                 button.btn.btn-default(type='submit')
                                     i.fa.fa-trash-o
-                                    = ' Delete'
+                                    = ' Eliminar'
     form(action='/admin/products/add', method='GET')
         button.btn.btn-default(type='submit')
             i.fa.fa-plus
-            = ' Add new product'
+            = ' Agregar Producto'
     br
     br

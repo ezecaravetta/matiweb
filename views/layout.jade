@@ -32,15 +32,15 @@ html
                                     li
                                         a(href='#')
                                             i.fa.fa-phone
-                                            |  +358 58 258 2258
+                                            |  4442 4578
                                     li
-                                        a(href='mailto:info@astore.com')
+                                        a(href='mailto:caravettasystem@gmail.com')
                                             i.fa.fa-envelope
-                                            |  info@astore.com
+                                            |  caravettasystem@gmail.com
                         .col-sm-6
                             .shop-menu.pull-right
                                 ul.nav.navbar-nav
-                                    -var orderCus = 'Account'
+                                    -var orderCus = 'Cuenta'
                                     -var link = '/sign-in'
                                     if customer
                                         -orderCus=customer.FullName
@@ -52,7 +52,7 @@ html
                                     li
                                         a(href='/cart')
                                             i.fa.fa-shopping-cart
-                                            |  Cart
+                                            |  Carro
                                     //li
                                     //    a(href='/checkout')
                                     //        i.fa.fa-money
@@ -61,7 +61,7 @@ html
                                         li
                                             a(href='/sign-out')
                                                 i.fa.fa-sign-out
-                                                |  Logout
+                                                |  Salir
             ///header_top
 
             //header-middle
@@ -98,18 +98,18 @@ html
                                             | Home
                                     li
                                         a(class={active: currentUrl === '/cat/all'}, href='/cat/all')
-                                            | Products
+                                            | Productos
                                     li.dropdown
                                         a(class={active: currentUrl === '/services'}, href='/services')
-                                            | Services
+                                            | Servicios
                                             i.fa.fa-angle-down
                                         ul.sub-menu(role='menu')
                                             li
-                                                a(href='/services/shipment') Shipment
+                                                a(href='/services/shipment') Envio
                                             li
-                                                a(href='/services/return') Return Policy
+                                                a(href='/services/return') Garantia y Seguridad
                                             li
-                                                a(href='/services/payment') Payment
+                                                a(href='/services/payment') Pagos
                                             li
                                                 a(href='/services/vouchers') Voucher
                                     li.dropdown
@@ -118,15 +118,15 @@ html
                                             i.fa.fa-angle-down
                                         ul.sub-menu(role='menu')
                                             li
-                                                a(href='/press/careers') Careers
+                                                a(href='/press/careers') Historia
                                             li
-                                                a(href='/press/partners') Partners
+                                                a(href='/press/partners') Planta
                                             li
-                                                a(href='/press/privacy-terms') Privacy Terms
+                                                a(href='/press/privacy-terms') Terminos y Privacidad
                                             li
-                                                a(href='/press/about-us') About Us
+                                                a(href='/press/about-us') Sobre Nosotros
                                     li
-                                        a(class={active: currentUrl === '/contact-us'}, href='/contact-us') Contact Us
+                                        a(class={active: currentUrl === '/contact-us'}, href='/contact-us') Contacto
                         .col-sm-3
                             .search_box.pull-right
                                 input(type='text', placeholder='Search')
@@ -165,9 +165,9 @@ html
                                     span a
                                     | Store
                                 p
-                                    | aStore is a leading online retailer
-                                    | committed to becoming the most loved
-                                    | and trusted marketplace on the web.
+                                    | aStore es un recurso para nuestros
+                                    | clientes para facilitarles la 
+                                    | gestion de sus pedidos por la Web.
                         .col-sm-2
                             .single-widget
                                 h2 Media
@@ -193,43 +193,43 @@ html
                                 h2 Press
                                 ul.nav.nav-pills.nav-stacked
                                     li
-                                        a(href='/press/careers') Careers
+                                        a(href='/press/careers') Historia
                                     li
-                                        a(href='/press/partners') Partners
+                                        a(href='/press/partners') Planta
                                     li
-                                        a(href='/press/privacy') Privacy Terms
+                                        a(href='/press/privacy') Terminos y Privacidad
                                     li
-                                        a(href='/press/about') About aStore
+                                        a(href='/press/about') Sobre nosotros
                         .col-sm-2
                             .single-widget
-                                h2 Services
+                                h2 Servicios
                                 ul.nav.nav-pills.nav-stacked
                                     li
-                                        a(href='/services/shipment') Shipment
+                                        a(href='/services/shipment') Envio
                                     li
-                                        a(href='/services/return') Return Policy
+                                        a(href='/services/return') Garantia y Seguridad
                                     li
-                                        a(href='/services/payment') Payment
+                                        a(href='/services/payment') Pagos
                                     li
                                         a(href='/services/voucher') Voucher
                         .col-sm-3.col-sm-offset-1
                             .single-widget
                                 h2 NewsLetter
                                 form.searchform(action='/subscribe', method='POST')
-                                    input(type='text', name='email', placeholder='Your email address')
+                                    input(type='text', name='email', placeholder='Direccion Correo Electronico')
                                     button.btn.btn-default(type='submit')
                                         i.fa.fa-arrow-circle-o-right
                                     p
-                                        | Get the most recent updates, exclusive deals
-                                        | you wont find anywhere else straight to your
-                                        | inbox and be updated your self...
+                                        | Recibe las actualizaciones mas Recientes
+                                        | en su correo electronico
+                                        | Precios, Catalogos, Etc...
             .footer-bottom
                 .container
                     .row
-                        p.pull-left &copy 2015 aStore Inc. All rights reserved.
+                        p.pull-left &copy 2016 CaravettaSystem Inc. All rights reserved.
                         p.pull-right= 'Designed by '
                             span
-                                a(target='_blank', href='http://users.metropolia.fi/~duyp/') Anh Pham
+                                a(target='_blank', href='http://users.metrpolia.fi/~duyp/') TecSystem
         ///Footer
         script(src='/js/jquery-2.1.4.min.js')
         script(src='/js/bootstrap.min.js')

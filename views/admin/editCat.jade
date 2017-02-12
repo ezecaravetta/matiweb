@@ -2,18 +2,18 @@ extends admin
 
 block details
     form(id='editCat', action='/admin/cat/' + category.CategoryID + '/edit', method='POST')
-        label(for='name') Category Name
+        label(for='name') Nombre de Categoria
         br
         input(type='text', id='name', name='name', value=category.CategoryName, required=true)
         br
-        label(for='description') Description
+        label(for='description') Descripcion
         br
         textarea(id='description', name='description', required=true)= category.Description
         br
-        label(for='image') Category Image
+        label(for='image') Imagen de Categoria
         br
         if category.Image
             img.dev-img(src='/img/categories/' + category.Image, alt=category.CategoryName)
         input(type='file', id='image', name='image')
         br
-        button.dev-btn.btn.btn-default(type='submit') Submit
+        button.dev-btn.btn.btn-default(type='submit') Actualizar
